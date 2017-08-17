@@ -9,4 +9,8 @@ class PagesController extends Controller
     public function profile() {
         return view('pages.profile');
     }
+
+    public function index() {
+        return view('pages.index');
+    }
 }
