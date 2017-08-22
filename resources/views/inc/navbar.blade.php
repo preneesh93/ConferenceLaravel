@@ -18,5 +18,8 @@
           <li class="nav-item">
             <a class="nav-link" href="/register">Register</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/submissions">Submissions</a>
+          </li>
       </div>
     </nav>

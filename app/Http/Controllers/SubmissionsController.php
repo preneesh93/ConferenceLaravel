@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Submission;
 
 class SubmissionsController extends Controller
 {
@@ -13,7 +14,8 @@ class SubmissionsController extends Controller
      */
     public function index()
     {
-        //
+        $subs = Submission::orderBy('created_at','desc')->paginate(5);
+        return view('submissions.index')->with('subs', $subs);
     }
 
     /**
@@ -45,7 +47,9 @@ class SubmissionsController extends Controller
      */
     public function show($id)
     {
-        //
+        $sub = Submission::find($id);
+        $keys = $sub->keywords;
+        return view('submissions.show', compact('sub','keys'));
     }
 
     /**
