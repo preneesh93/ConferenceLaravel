@@ -12,5 +12,6 @@
 */
 
 Route::get('/', 'PagesController@index');
-
 Route::get('/profile', 'PagesController@profile');
+
+Route::resource('submissions','SubmissionsController');
